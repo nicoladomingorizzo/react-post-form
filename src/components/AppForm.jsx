@@ -1,8 +1,8 @@
-export default function AppForm({ formData, setFormData }) {
+export default function AppForm({ formData, setFormData, handleSubmit }) {
     return (
         <>
             <div className="bg-body-tertiary p-3">
-                <form>
+                <form onSubmit={e => handleSubmit(e)}>
 
                     {/* Author input */}
                     <div className="mb-3">
@@ -58,7 +58,6 @@ export default function AppForm({ formData, setFormData }) {
                     <button
                         type="submit"
                         className="btn btn-primary"
-                    // onSubmit={''}
                     >Submit</button>
                 </form>
             </div>
